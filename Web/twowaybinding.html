@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title> 
+		Two-way Data Binding in AngularJS 
+	</title> 
+	<script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"> 
+	</script> 
+</head> 
+
+<body ng-app="myApp"> 
+	<h1>GeeksforGeeks</h1> 
+	<h3>Two-way Binding</h3> 
+	<h4>Registration form</h4> 
+	<form name="registrationForm"
+		ng-controller="myCtrl"> 
+		<label>Enter your name</label> 
+		<input type="text"
+			ng-model="name" /> 
+		<br /> 
+		<label>Enter your age</label> 
+		<input type="text"
+			ng-model="age" /> 
+		<br /> 
+		<p>Courses:</p> 
+		<input type="checkbox"
+			ng-model="value1"
+			name="option1"
+			value="C++" /> 
+		<label>C++</label> 
+		<br /> 
+		<input type="checkbox"
+			ng-model="value2"
+			name="option2"
+			value="Java" /> 
+		<label>Java</label> 
+		<br /> 
+		<input type="checkbox"
+			ng-model="value3"
+			name="option3"
+			value="Python" /> 
+		<label>Python</label> 
+		<br /> 
+		<input type="submit"
+			ng-click="details()" /> 
+		<div> 
+			<br /> 
+			<table border="1px solid black"
+				style="border-collapse: collapse"> 
+				<tr border="1px solid black"
+					style="border-collapse: collapse"
+					ng-repeat="x in registrationDetails"> 
+					<td>{{x.key}}</td> 
+					<td>{{x.value}}</td> 
+				</tr> 
+			</table> 
+		</div> 
+	</form> 
+	<script type="text/javascript"> 
+		var app = angular.module('myApp', []); 
+		app.controller('myCtrl', function($scope) { 
+			$scope.details = function() { 
+				$scope.courses = []; 
+				if($scope.value1) 
+					$scope.courses.push(registrationForm.option1.value); 
+				if($scope.value2) 
+					$scope.courses.push(registrationForm.option2.value); 
+				if($scope.value3) 
+					$scope.courses.push(registrationForm.option3.value); 
+				$scope.registrationDetails = [{ 
+					key: 'Name', 
+					value: $scope.name 
+				}, { 
+					key: 'Age', 
+					value: $scope.age 
+				}, { 
+					key: 'Courses interested in', 
+					value: $scope.courses.toString() 
+				}, ]; 
+			}; 
+		}); 
+	</script> 
+</body> 
+</html>
