@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+        <title>AngularJS Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-controller="UserController">
+    <h2>Hello, {{ username }}</h2>
+    <button ng-click="changeUsername()">Change Username</button>
+</div>
+
+<script>
+    angular.module('myApp', [])
+        .controller('UserController', function ($scope) {
+            $scope.username = 'John Doe'; // Set default username
+
+            $scope.changeUsername = function () {
+                $scope.username = 'Jane Doe'; // Change username when the button is clicked
+            };
+        });
+</script>
+
+</body>
+</html>
+

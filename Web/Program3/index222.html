@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Controllers and Scopes in AngularJS</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="UserController as userCtrl">
+  <h1>Hello, {{ userCtrl.username }}</h1>
+  <button ng-click="userCtrl.updateUsername()">Change Username</button>
+
+  <script>
+    var app = angular.module('myApp', []);
+
+    app.controller('UserController', ['$scope', function($scope) {
+      var vm = this;
+      vm.username = "NMAMIT";
+
+      vm.updateUsername = function() {
+        vm.username = "NITTE";
+      };
+    }]);
+  </script>
+</body>
+
+</html>
+

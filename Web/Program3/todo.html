@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+    <title>To-Do List Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-controller="TodoController">
+    <h2>To-Do List</h2>
+    <ul>
+        <li ng-repeat="todo in todos">{{ todo.task }}</li>
+    </ul>
+    <form ng-submit="addTodo()">
+        <input type="text" ng-model="newTodo" placeholder="Add a new task">
+        <button type="submit">Add</button>
+    </form>
+</div>
+
+<script>
+    angular.module('todoApp', [])
+        .controller('TodoController', function ($scope) {
+            $scope.todos = [
+                { task: 'Task 1' },
+                { task: 'Task 2' },
+                { task: 'Task 3' }
+            ];
+
+            $scope.addTodo = function () {
+                $scope.todos.push({ task: $scope.newTodo });
+                $scope.newTodo = '';
+            };
+        });
+</script>
+
+</body>
+</html>
