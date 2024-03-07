@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>AngularJS Filters</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-controller="MyController">
+  <h2>Original List:</h2>
+  <ul>
+    <li ng-repeat="item in items">{{ item.name }} - {{ item.price | currency }}</li>
+  </ul>
+
+  <h2>Filtered List:</h2>
+  <ul>
+    <li ng-repeat="item in items | orderBy:'name'">{{ item.name | uppercase }} - {{ item.price | currency }}</li>
+  </ul>
+
+  <h2>Custom Filtered List:</h2>
+  <ul>
+    <li ng-repeat="item in items | customFilter">{{ item.name | lowercase }} - {{ item.price | currency }}</li>
+  </ul>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+
+app.controller('MyController', function($scope) {
+  $scope.items = [
+    { name: 'Apple', price: 1.99 },
+    { name: 'Banana', price: 0.99 },
+    { name: 'Orange', price: 2.49 }
+  ];
+});
+
+app.filter('customFilter', function() {
+  return function(items) {
+    var filtered = [];
+    angular.forEach(items, function(item) {
+      if (item.price > 1) {
+        filtered.push(item);
+      }
+    });
+    return filtered;
+  };
+});
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <title>Handling Button Click in AngularJS</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="ButtonClickController as buttonCtrl">
+
+  <button ng-click="buttonClicked = true">Click Me</button>
+  <p ng-show="buttonClicked">Button was clicked!</p>
+
+  <script>
+    var app = angular.module('myApp', []);
+
+    app.controller('ButtonClickController', function() {
+      this.buttonClicked = false;
+    });
+  </script>
+
+</body>
+
+</html>
