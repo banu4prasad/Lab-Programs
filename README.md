@@ -1,7 +1,19 @@
 # Lab-Programs
-This repo contains the Lab program files of the 4th semester
-1. Machine Learning (Python)
-2. Algorithms (C)
-3. Web Interface (HTML, CSS, JS)
-4. R programming
- 
+This repo contains the Lab program files starting from III sem
+
+## Getting Started
+
+To get started with, follow these steps:
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone git@github.com:banu4prasad/Lab-Programs.git
+   ```
+
+2. **Navigate to the Programs Directory:**
+
+   ```bash
+   cd Lab-Programs
+   cd <the folder name>
+   ```
