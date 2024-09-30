@@ -1,7 +1,8 @@
-# To Run Python Code
+## Run Python Code
 
 ## Prerequisites
 - **Python**: Ensure that Python is installed on your system. You can check the version with the following command:
+  
   ```bash
   python3 --version
   ```
@@ -17,6 +18,6 @@
 
 3. **Run the Python Script**: Use the following command to run the Python script:
    ```bash
-   python3 script_name.py
+   python3 filename.py
    ```
    Replace `filename.py` with the name of your Python file.
