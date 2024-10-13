@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+#Ques
+	{
+	font-weight:bold;
+	line-height:140%;
+	font-size:30;
+	color:Red;
+	font-family:"Calibri";
+	padding-bottom:30px;
+	}
+#B
+	{
+	font-family="Verdana", Calibri;
+	line-height:175%;
+	text-align:justify;
+	-webkit-transition: all 0.7s ease;
+	transition: all 0.7s ease;	
+	}
+
+#C
+	{
+	font-family="Verdana", Calibri;
+	line-height:175%;
+	text-align:left;
+	-webkit-transition: all 0.7s ease;
+	transition: all 0.7s ease;	
+	}
+
+#B:hover
+	{
+		text-shadow:0px 0 15px #F00;
+	}
+
+#C:hover
+	{
+		text-shadow:0px 0 15px #F00;
+	}
+
+.txt
+	{
+		text-shadow:0px 0 15px #F00;
+		-webkit-transition: all 0.7s ease;
+		transition: all 0.7s ease;
+		
+	}
+td
+	{
+		font-family:Verdana, Geneva, sans-serif;
+		padding:10px 10px 5px 10px;
+	}
+table
+	{
+		width:800px;	
+	}
+.indexpage
+	{
+				padding:10px 0px 0px 10px;
+	}
+	
+.style1 {
+	font-family: Wingdings;
+}
+
+a:link 
+	{
+		color:blue;
+	}
+
+a:hover
+	{
+		color:red;
+		
+	}
+a:visited
+	{
+		color:blue;
+	}
