@@ -1,0 +1,318 @@
+
+<!-- saved from url=(0038)https://www.iitk.ac.in/nt/faq/vbox.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title> Windows Faq </title>
+
+<link rel="stylesheet" type="text/css" href="./Windows Faqq_files/faq.css">
+
+
+<script type="text/javascript">
+
+/***********************************************
+* Disable Text Selection script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+function disableSelection(target)
+{
+	if (typeof target.onselectstart!="undefined") 		//IE route
+		target.onselectstart=function(){return false}
+	else
+	if (typeof target.style.MozUserSelect!="undefined") 	//Firefox route
+		target.style.MozUserSelect="none"
+	else 							//All other route (ie: Opera)
+		{
+		target.onmousedown=function(){return false}
+		}
+	target.style.cursor = "default"
+
+}
+
+
+//Sample usages
+//disableSelection(document.body) //Disable text selection on entire body
+//disableSelection(document.getElementById("mydiv")) //Disable text selection on element with id="mydiv"
+
+</script>
+
+
+
+
+</head>
+
+<body style="cursor: default;">
+
+<script type="text/javascript" language="javascript">
+<!--
+
+//Disable right mouse click Script
+//By Maximus (maximus@nsimail.com) w/ mods by DynamicDrive
+//For full source code, visit http://www.dynamicdrive.com
+
+var message="Function Disabled!";
+
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+//alert(message);
+return false;
+}
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+//alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("return false")
+
+// --> 
+</script>
+
+
+<center>
+
+                
+	<table border="0" width="700px" style="cursor: default;">
+			<tbody><tr>
+				<td id="Ques" class="txt" align="center"> 
+				Installation of VirtualBox and Virtual Machine on Windows 7/8/10</td>
+			</tr>
+			<tr>
+				<td id="B"><div style="border: red 7px ridge; margin:30px 0px 0px 0px; padding-top: 25px; padding-right: 25px; padding-bottom: 25px; padding-left: 25px;"> This article is useful for those who primarily use Windows  but for some reason  want to have a parallel Linux machine running without dual boot. This is possible through virtualization. The opposite (Windows on a virtual machine inside Linux) is also possible, though we are not discussing it here. 
+VirtualBox is a free software and has been reported to  work well. This article provides installation and configuration steps along with screenshots.
+</div> 
+			</td>
+			</tr>
+			<tr>
+				<td id="B"> To download VirtualBox setup for installation <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">click here</a>. 
+			</td>
+			</tr>
+		    	<tr>
+				<td id="B">Run the Virtual Box setup and click on "Next" button.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox001.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">Click on "Next" button.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox002.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">Click on "Next" button.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox003.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B"><p>Click on "Yes" button.</p></td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox004.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">Click on "Install" button.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox005.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B"><font color="red"> Installing "Ubuntu" as virtual machine in "Oracle VM VirtualBox".</font><br>
+              1. Open "Oracle VM VirtualBox Manager".</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox006.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">2. Click on "New" button and select "Expert Mode".</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox007.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">3. Provide the name and operating system information for virtual machine.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox008.png" width="auto" height="auto">
+				<div id="B" style="float:right; text-align:justify; width:200px;hight:auto; border: red 7px ridge; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;">
+                	 <font color="red">Note: </font> Before installing 64-bit operating system, Intel VT-x/AMD-V must be enabled in "BIOS" on the system. To enable Intel VT-x/AMD-V, open BIOS and search for "Intel Virtualization Technology" or "AMD-V", save the BIOS and boot the PC/Laptop.</div></td>
+                        
+                
+                
+			</tr>
+			<tr>
+				<td id="B">4. Select the path for the virtual hard disk and click on "Create" button.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox009.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">5. Select the virtual machine from the virtual box manager and click on "Settings" button.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox010.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">6. Select "System" and navigate to "Processor" tab to adjust number of processor of virtual machine for better performance.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox011.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">7. Select "Storage" and choose the installation media of Operating System (ISO/CD/DVD). Preferred Linux ".iso" can be downloaded from <a href="ftp://ftp.cc.iitk.ac.in/pub/unix/Linux-ISO/" target="_blank">CC ftp site</a>. Also many different flavours of Linux are available on the internet - <a href="https://getfedora.org/" title="Fedora" target="_blank">Fedora</a>, <a href="https://www.centos.org/" title="CentOS" target="_blank">CentOS</a>, <a href="http://www.ubuntu.com/" title="Ubuntu" target="_blank">Ubuntu</a>, <a href="https://www.debian.org/" title="Debian" target="_blank">Debian</a>, <a href="https://www.mageia.org/" title="Mageia" target="_blank">Mageia</a>, <a href="https://www.opensuse.org/" title="openSUSE" target="_blank">openSUSE</a>, <a href="https://www.archlinux.org/" title="Arch Linux" target="_blank">Arch Linux</a>, <a href="https://www.iitk.ac.in/nt/faq/www.slackware.com/" title="Slackware Linux" target="_blank">Slackware Linux</a>, etc.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox012.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox013.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">8. Select "Network" to make changes required for network setting of virtual machine and click on "OK </td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox014.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">9. Select the created virtual machine and click on "Start" button.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox029.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">10. Proceed with the installation of operating system in virtual machine.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox015.png" width="auto" height="auto"></td>
+			</tr>
+            		<tr>
+				<td id="B"><font color="red"> Installing "Guest Additions CD image" in Ubuntu virtual machine.</font><br>
+		      1. Login to user account on Ubuntu virtual machine. <br> Select "Device &gt; Insert Guest Addition CD image".</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox016.png" width="auto" height="auto"></td>
+			</tr>
+            		<tr>
+				<td id="B">2. Click "Run" to install "Guest Additions".</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox017.png" width="auto" height="auto"></td>
+			</tr>
+            		<tr>
+				<td id="B">3. Input the authentication of super user and click on "Authenticate". After completing installtion "Reboot" the virtual machine.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox018.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B"><font color="red"> Enable "Shared Folder" between host os (i.e. Windows OS) and guest os (i.e. Ubuntu).</font> <br>
+				  Note: <font color="red">Before continuing, shutdown the virtual machine.</font> <br>
+			    1. Create a folder on host os (i.e. on Windows) with any name "Share" on any drive having suffecient available space.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox019.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">2. Select the virtual machine in "Oracle VM VirtualBox Manager" and click on "Settings".</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox020.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">3. Select "Shared Folders" and click on "<strong>+</strong>" to add a shared folder to virtual machine.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox021.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">4. Enter the "Folder Path, Folder Name" and select "Auto-mount" and click on "OK" button.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox022.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox023.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">5. Power on the virtual machine and open "Terminal".</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox024.png" width="auto" height="auto"></td>
+			</tr>
+			<tr>
+				<td id="B">6. Run the following commands in"Terminal" <br>
+		      "mkdir vmshare" where vmshare is the mount point for Shared Folder.<br>
+		      "sudo chmod 777 vmshare" </td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox025.png" width="auto" height="auto"></td>
+			</tr>
+            <tr>
+				<td id="B">7. Append a line in "/etc/rc.local" file to automount the "Shared Folder" on every boot. <br>			      mount -t vboxsf -o uid=1000,gid=1000 Share /home/&lt;Your User Name&gt;/vmshare<br> 
+				  Save the file and reboot the virtual machine.</td>
+			</tr>
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox026.png" width="auto" height="auto"></td>
+			</tr>
+            <tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox027.png" width="auto" height="auto"></td>
+			</tr>
+
+			<tr>
+				<td align="center"><img src="./Windows Faqq_files/vbox028.png" width="auto" height="auto"></td>
+			</tr>
+			      
+	</tbody></table>
+	
+	<div> <form method="post">
+		<input type="button" value="Close Window" onclick="window.close()">
+	</form> </div>
+
+
+</center>
+<div class="text">
+	<hr>
+    <center><i><font size="1" face="Verdana">© 2008, Computer Centre, IIT 
+	Kanpur All rights reserved.<br>
+	This site maintained by Windows Labs Administrator <br>
+	Suggestions and comments about this web site:
+	<a href="mailto:gopesh@iitk.ac.in">gopesh@iitk.ac.in</a> <br>
+	This page was last modified:
+	<!--webbot bot="Timestamp" S-Type="REGENERATED" S-Format="%d %B %Y %I:%M %p" startspan -->14 June 2016 04:15 PM<!--webbot bot="Timestamp" endspan i-checksum="28852" --></font></i>
+	</center>
+</div>
+
+
+<script type="text/javascript">
+disableSelection(document.body) //disable text selection on entire body of page
+</script>
+
+<script type="text/javascript">
+//var somediv=document.getElementById("mydiv")
+//disableSelection(somediv) //disable text selection within DIV with id="mydiv"
+</script>
+
+<script type="text/javascript">
+var alltables=document.getElementsByTagName("table")
+for (var i=0; i<alltables.length; i++)
+disableSelection(alltables[i]) //disable text selection within all tables on the page
+</script>
+
+
+</body></html>
