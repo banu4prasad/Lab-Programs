@@ -1,0 +1,44 @@
+1) setup
+    use database_name //creates and starts using the database
+
+C - Create
+R - Read
+U - Update
+D - Delete
+
+2) Create 
+    i) db.inventory.insertOne(
+   { item: "canvas", qty: 100, tags: ["cotton"], size: { h: 28, w: 35.5, uom: "cm" } }  // inserts one query
+)
+    ii) db.inventory.insertMany([
+   { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+   { item: "mat", qty: 85, tags: ["gray"], size: { h: 27.9, w: 35.5, uom: "cm" } },              //inserts many query
+   { item: "mousepad", qty: 25, tags: ["gel", "blue"], size: { h: 19, w: 22.85, uom: "cm" } }
+])
+
+3) Read 
+    i) db.inventory.find( { item: "canvas" } )
+    ii) db.inventory.find({qty:90})
+    iii) db.inventory.find( {tags: { $in: ["red" , "D"] } } ) //tags is the column name
+
+4) Update 
+    i) db.inventory.updateOne(
+   { item: "paper" },
+   {
+     $set: { "size.uom": "cm", status: "P" },
+     $currentDate: { lastModified: true }
+   }
+)
+
+  ii) db.inventory.updateMany(
+   { "qty": { $lt: 50 } },
+   {
+     $set: { "size.uom": "in", status: "P" },
+     $currentDate: { lastModified: true }
+   }
+)
+
+5) Delete 
+  i) db.inventory.deleteOne( { status: "D" } )
+  ii) db.inventory.deleteMany({ status : "A" })
+
