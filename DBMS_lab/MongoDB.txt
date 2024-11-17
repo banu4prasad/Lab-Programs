@@ -39,6 +39,6 @@ D - Delete
 )
 
 5) Delete 
-  i) db.inventory.deleteOne( { status: "D" } )
-  ii) db.inventory.deleteMany({ status : "A" })
+  i) db.inventory.deleteOne()  //deletes the first inserted query
+  ii) db.inventory.deleteMany()  //delets all the inserted queries
 
