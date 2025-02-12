@@ -1,0 +1,13 @@
+{
+    "name": "square-and-cube",
+    "version": "1.0.0",
+    "description": "A project that calculates the square and cube of numbers",
+    "main": "main.js",
+    "type": "module",
+    "scripts": {
+      "start": "node main.js"
+    },
+    "author": "Banuprasad",
+    "license": "MIT"
+  }
+  
