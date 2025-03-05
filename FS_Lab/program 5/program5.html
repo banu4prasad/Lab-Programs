@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutation & Async</title>
+</head>
+<body>
+    <button id="change">Change Text</button>
+    <div id="content">Original</div>
+    <script>
+        const content = document.getElementById("content");
+        const observer = new MutationObserver(() =>
+        console.log("mutation detected:", content.textContent)
+        );
+        observer.observe(content, {childList:true});
+        document.getElementById("change").addEventListener("click", () => {
+            content.textContent = "Updated";
+            Promise.resolve().then(() => console.log("Microtask:Promise"));
+            setTimeout(() => console.log("Macrotask:setTimeout"),0);
+        });
+
+        console.log("script starts");
+
+        Promise.resolve().then(() => console.log("Microtask:First Promise"));
+        setTimeout(() => console.log("Macrotask:First setTimeout"),0);
+    </script>
+</body>
+</html>
