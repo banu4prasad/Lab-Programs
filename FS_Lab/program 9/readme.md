@@ -7,9 +7,3 @@ Follow these steps.
    cd backend
    npm install
    ```
-   
-2. Navigate to the frontend directory:
-   ```bash
-    cd frontend
-    npm install
-   ```
