@@ -20,3 +20,7 @@ console.log(calcGen.next().value);
 console.log(calcGen.next().value);
 console.log(calcGen.next().value);
 
+/* To run the file
+   node <filename>.js */
+
+
