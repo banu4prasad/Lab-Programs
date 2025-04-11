@@ -1,8 +1,8 @@
 body {
-    background-color: #bff7a0;
+    background-color: #bff7a0; /* green */
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: #333;
+    color: #333; /* black */
 }
 
 h2 {
@@ -10,14 +10,14 @@ h2 {
 }
 
 p {
-    background: #fff;
+    background: #fff; /* white */
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 a {
-    color: #ff4500;
+    color: #ff4500; /* red */
     text-decoration: none;
     display: block;
     margin: 10px 0;
