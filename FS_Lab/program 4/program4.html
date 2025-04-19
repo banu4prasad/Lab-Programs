@@ -16,7 +16,7 @@
         const msg = document.getElementById("msg");
 
         btn.addEventListener("click", () => {
-            msg.textContent = nameInput.value ? `Hello,${nameInput}!` : "Enter a name!";
+            msg.textContent = nameInput.value ? `Hello,${nameInput.value}!` : "Enter a name!";
         });
         nameInput.addEventListener("keyup", ()=> {
             msg.textContent = `Typing:${nameInput.value}`;
