@@ -12,7 +12,7 @@ npm install
 ```bash
 npx-create-react-app@latest frontend
 cd frontend
-npm start
+npm install web-vitals
 ```
 
 ### Files to Edit
