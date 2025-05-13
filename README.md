@@ -17,7 +17,3 @@ To get started with, follow these steps:
    cd Lab-Programs
    cd <the folder name>
    ```
-
-## Contributions
-
-If you have additional docx, feel free to create a pull request.
