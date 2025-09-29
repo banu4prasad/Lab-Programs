@@ -1,0 +1,3 @@
+A hospital faces challenges in monitoring patient outcomes, documenting hospital activities, handling insurance claims, and tracking revenue streams across departments. The organization aims to enable management, doctors, and administrative staff to generate insights like “Which treatments lead to better patient outcomes?” and “Which departments have the highest operational costs?” 
+
+Create the dimension and fact tables, and generate the schema. Enter around 100 random entries for each table. Draw a suitable graph and create a dashboard. 
