@@ -10,6 +10,5 @@ with socket.create_connection((HOST, PORT)) as sock:
         msg = "Hello Secure World!"
         print(" Sending:", msg)
         ssock.sendall(msg.encode())
-        
         reply = ssock.recv(1024).decode()
         print("Received from server:", reply)

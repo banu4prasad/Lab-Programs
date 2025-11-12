@@ -10,14 +10,9 @@ def run_client():
         return
 
     seq = [
-        "ARP:10.0.0.1:aa:aa:aa:01",
-        "ARP:10.0.0.2:aa:aa:aa:02",
-        "HELLO",
-        "ARP:10.0.0.1:aa:aa:aa:01",
-        "ARP:10.0.0.1:02:bb:cc:03",   # simulated conflict
-        "quit"
-    ]
-
+        "ARP:10.0.0.1:aa:aa:aa:01", "ARP:10.0.0.2:aa:aa:aa:02", "HELLO",
+        "ARP:10.0.0.1:aa:aa:aa:01", "ARP:10.0.0.1:02:bb:cc:03", "quit" ]
+    
     with c:
         for m in seq:
             print("[C] send:", m)
@@ -28,7 +23,6 @@ def run_client():
             except Exception:
                 print("[C] no reply")
             time.sleep(0.6)
-
     print("[C] client done")
 
 if __name__ == "__main__":
